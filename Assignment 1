@@ -1,0 +1,78 @@
+--maximum recovered covid19 cases in Italy
+SELECT
+  max(recovered)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+  
+  --minimum recovered covid19 cases in Italy
+SELECT
+  min(recovered)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--average recovered  covid 19 cases in Italy
+SELECT
+  avg(recovered)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--Sum recovered covid19 cases in Italy
+SELECT
+  sum(recovered)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--Count recovered covid19 cases in Italy
+SELECT
+  count(recovered)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--group by
+SELECT
+recovered , count(*)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  GROUP BY (recovered)
+  Limit 10
+
+--distinct
+SELECT DISTINCT 
+recovered , 
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  LIMIT 
+  10
+
+--maximum deaths of covid19 cases in Italy
+SELECT
+  max(deaths)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--minimum deaths of covid19 cases in Italy
+SELECT
+  min(deaths)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--count deaths of covid19 cases in Italy
+SELECT
+  count(deaths)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
+
+--sum deaths of covid 19 cases in Italy
+SELECT
+  sum(deaths)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+  limit 10
